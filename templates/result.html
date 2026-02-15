@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            border-radius: 15px;
+        }
+        .temp {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4 text-center">
+                <h3 class="mb-3">Weather in {{ weather.city }}</h3>
+
+                <div class="temp text-primary">
+                    {{ weather.temperature }} °C
+                </div>
+
+                <p class="fs-5">
+                    💨 Wind Speed: {{ weather.wind_speed }} km/h
+                </p>
+
+                <a href="/" class="btn btn-dark mt-3">Search Another City</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
